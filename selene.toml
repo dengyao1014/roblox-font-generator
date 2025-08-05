@@ -1,4 +1,0 @@
-std = "roblox"
-
-[[globals.require.args]]
-type = "string"

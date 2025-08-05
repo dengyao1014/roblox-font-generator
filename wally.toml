@@ -1,7 +1,0 @@
-[package]
-name = "cxmeel/font-list"
-version = "{{version}}"
-registry = "https://github.com/UpliftGames/wally-index"
-realm = "shared"
-
-[dependencies]
