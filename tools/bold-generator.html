@@ -3,41 +3,107 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bold Text Generator</title>
-    <link rel="stylesheet" href="../assets/css/styles.css">
+    <title>Bold Text Generator - Roblox Font Generator</title>
+    <link rel="stylesheet" href="../assets/css/main.css">
+
 </head>
 <body>
-    <header>
-        <h1>Bold Text Generator</h1>
-        <nav>
-            <ul>
-                <li><a href="../index.html">主页</a></li>
-                <li><a href="../free-fonts.html">免费字体</a></li>
-                <li><a href="../aesthetic-fonts.html">美学字体</a></li>
-                <li><a href="../old-fonts.html">经典字体</a></li>
-                <li><a href="../font-changer.html">字体更换工具</a></li>
-                <li><a href="../download.html">字体下载</a></li>
-                <li><a href="bold-generator.html">加粗生成器</a></li>
-                <li><a href="italic-generator.html">斜体生成器</a></li>
-                <li><a href="script-generator.html">脚本生成器</a></li>
-                <li><a href="../guides/how-to-use.html">使用指南</a></li>
-                <li><a href="../guides/roblox-username-tips.html">用户名技巧</a></li>
-                <li><a href="../guides/font-compatibility.html">字体兼容性</a></li>
-            </ul>
+    <div class="container">
+        <nav style="background:#333; color:#fff; padding:10px 0; text-align:center;">
+            <a href="../index.html" style="color:#fff; margin:0 10px; text-decoration:none; padding:5px 10px; border-radius:3px;">Home</a>
+            <a href="../free-fonts.html" style="color:#fff; margin:0 10px; text-decoration:none; padding:5px 10px; border-radius:3px;">Free Fonts</a>
+            <a href="../aesthetic-fonts.html" style="color:#fff; margin:0 10px; text-decoration:none; padding:5px 10px; border-radius:3px;">Aesthetic Fonts</a>
+            <a href="../old-fonts.html" style="color:#fff; margin:0 10px; text-decoration:none; padding:5px 10px; border-radius:3px;">Classic Fonts</a>
+            <a href="../font-changer.html" style="color:#fff; margin:0 10px; text-decoration:none; padding:5px 10px; border-radius:3px;">Font Changer</a>
+            <a href="../download.html" style="color:#fff; margin:0 10px; text-decoration:none; padding:5px 10px; border-radius:3px;">Download Fonts</a>
+            <a href="bold-generator.html" style="color:#fff; margin:0 10px; text-decoration:none; padding:5px 10px; border-radius:3px;">Bold Generator</a>
+            <a href="italic-generator.html" style="color:#fff; margin:0 10px; text-decoration:none; padding:5px 10px; border-radius:3px;">Italic Generator</a>
+            <a href="script-generator.html" style="color:#fff; margin:0 10px; text-decoration:none; padding:5px 10px; border-radius:3px;">Script Generator</a>
+            <a href="../guides/how-to-use.html" style="color:#fff; margin:0 10px; text-decoration:none; padding:5px 10px; border-radius:3px;">How to Use</a>
+            <a href="../guides/roblox-username-tips.html" style="color:#fff; margin:0 10px; text-decoration:none; padding:5px 10px; border-radius:3px;">Username Tips</a>
+            <a href="../guides/font-compatibility.html" style="color:#fff; margin:0 10px; text-decoration:none; padding:5px 10px; border-radius:3px;">Font Compatibility</a>
         </nav>
-    </header>
-    <main>
-        <section>
-            <h2>Generate Bold Text</h2>
-            <textarea id="inputText" placeholder="Type your text here..."></textarea>
-            <button id="generateButton">Generate Bold Text</button>
-            <h3>Output:</h3>
-            <div id="outputText" style="font-weight: bold;"></div>
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2023 YourSite. All rights reserved.</p>
-    </footer>
-    <script src="../assets/js/bold-generator.js"></script>
+        <header class="header">
+            <h1>🔤 Bold Text Generator</h1>
+            <p>Create bold text for your Roblox username and social media posts</p>
+        </header>
+        <main class="main-content">
+            <div class="input-section">
+                <label for="inputText">✨ Enter your text here:</label>
+                <textarea id="inputText" class="text-input" placeholder="Type your text here..." rows="4"></textarea>
+            </div>
+
+            <div class="action-section">
+                <button id="generateButton" class="generate-btn">🔤 Generate Bold Text</button>
+            </div>
+
+            <div class="output-section">
+                <h2>📋 Generated Bold Text:</h2>
+                <div id="outputText" class="output-text"></div>
+                <button id="copyButton" class="copy-btn" style="display: none;">📋 Copy Text</button>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p>&copy; 2024 Roblox Font Generator | Free Stylish Text Effects for Gaming</p>
+            <p>Perfect for Roblox usernames, game chat, and social media posts</p>
+        </footer>
+    </div>
+
+    <div class="notification" id="notification">
+        ✅ Bold text copied to clipboard!
+    </div>
+
+    <script>
+        // Bold text transformation function
+        function generateBoldText(text) {
+            const boldMap = {
+                'a': '𝐚', 'b': '𝐛', 'c': '𝐜', 'd': '𝐝', 'e': '𝐞', 'f': '𝐟', 'g': '𝐠', 'h': '𝐡', 'i': '𝐢', 'j': '𝐣', 'k': '𝐤', 'l': '𝐥', 'm': '𝐦', 'n': '𝐧', 'o': '𝐨', 'p': '𝐩', 'q': '𝐪', 'r': '𝐫', 's': '𝐬', 't': '𝐭', 'u': '𝐮', 'v': '𝐯', 'w': '𝐰', 'x': '𝐱', 'y': '𝐲', 'z': '𝐳',
+                'A': '𝐀', 'B': '𝐁', 'C': '𝐂', 'D': '𝐃', 'E': '𝐄', 'F': '𝐅', 'G': '𝐆', 'H': '𝐇', 'I': '𝐈', 'J': '𝐉', 'K': '𝐊', 'L': '𝐋', 'M': '𝐌', 'N': '𝐍', 'O': '𝐎', 'P': '𝐏', 'Q': '𝐐', 'R': '𝐑', 'S': '𝐒', 'T': '𝐓', 'U': '𝐔', 'V': '𝐕', 'W': '𝐖', 'X': '𝐗', 'Y': '𝐘', 'Z': '𝐙'
+            };
+            
+            return text.split('').map(char => boldMap[char] || char).join('');
+        }
+
+        // Generate button click handler
+        document.getElementById('generateButton').addEventListener('click', function() {
+            const inputText = document.getElementById('inputText').value;
+            const outputText = document.getElementById('outputText');
+            const copyButton = document.getElementById('copyButton');
+            
+            if (inputText.trim()) {
+                const boldText = generateBoldText(inputText);
+                outputText.textContent = boldText;
+                copyButton.style.display = 'inline-block';
+            }
+        });
+
+        // Copy button click handler
+        document.getElementById('copyButton').addEventListener('click', function() {
+            const outputText = document.getElementById('outputText').textContent;
+            
+            navigator.clipboard.writeText(outputText).then(() => {
+                showNotification();
+            }).catch(() => {
+                // Fallback method
+                const textArea = document.createElement('textarea');
+                textArea.value = outputText;
+                document.body.appendChild(textArea);
+                textArea.select();
+                document.execCommand('copy');
+                document.body.removeChild(textArea);
+                showNotification();
+            });
+        });
+
+        // Show notification function
+        function showNotification() {
+            const notification = document.getElementById('notification');
+            notification.classList.add('show');
+            setTimeout(() => {
+                notification.classList.remove('show');
+            }, 3000);
+        }
+    </script>
 </body>
 </html>

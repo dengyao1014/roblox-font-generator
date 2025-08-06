@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-YR06M2QTVP"></script>
@@ -15,233 +15,25 @@
     <title>Roblox Font Generator - Free Roblox Text Effects & Fonts</title>
     <meta name="description" content="Create cool Roblox fonts and text effects instantly. Copy and paste stylish fonts for your Roblox username, game text, and social media posts.">
     <meta name="keywords" content="roblox font generator, roblox fonts, roblox text effects, copy paste fonts, stylish text">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+    <link rel="stylesheet" href="assets/css/main.css">
 
-        body {
-            font-family: 'Arial', sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
-            padding: 20px;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            background: white;
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-            overflow: hidden;
-        }
-
-        .header {
-            background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
-            color: white;
-            padding: 30px;
-            text-align: center;
-        }
-
-        .header h1 {
-            font-size: 2.5em;
-            margin-bottom: 10px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-        }
-
-        .header p {
-            font-size: 1.2em;
-            opacity: 0.9;
-        }
-
-        .main-content {
-            padding: 40px;
-        }
-
-        .input-section {
-            margin-bottom: 40px;
-        }
-
-        .input-section label {
-            display: block;
-            font-size: 1.3em;
-            font-weight: bold;
-            margin-bottom: 15px;
-            color: #333;
-        }
-
-        .text-input {
-            width: 100%;
-            padding: 15px;
-            font-size: 1.2em;
-            border: 3px solid #ddd;
-            border-radius: 10px;
-            outline: none;
-            transition: border-color 0.3s;
-        }
-
-        .text-input:focus {
-            border-color: #4ecdc4;
-        }
-
-        .fonts-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-            margin-bottom: 40px;
-        }
-
-        .font-item {
-            background: #f8f9fa;
-            border: 2px solid #e9ecef;
-            border-radius: 10px;
-            padding: 20px;
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-
-        .font-item:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-        }
-
-        .font-category {
-            font-size: 0.9em;
-            color: #666;
-            margin-bottom: 10px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        .font-preview {
-            font-size: 1.5em;
-            margin: 15px 0;
-            padding: 10px;
-            background: white;
-            border-radius: 5px;
-            word-break: break-all;
-            min-height: 60px;
-            display: flex;
-            align-items: center;
-        }
-
-        .copy-btn {
-            background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 25px;
-            cursor: pointer;
-            font-weight: bold;
-            transition: transform 0.2s;
-        }
-
-        .copy-btn:hover {
-            transform: scale(1.05);
-        }
-
-        .copy-btn:active {
-            transform: scale(0.95);
-        }
-
-        .tutorial-section {
-            background: #f8f9fa;
-            padding: 30px;
-            border-radius: 10px;
-            margin-top: 40px;
-        }
-
-        .tutorial-section h2 {
-            color: #333;
-            margin-bottom: 20px;
-            font-size: 1.8em;
-        }
-
-        .tutorial-steps {
-            list-style: none;
-            counter-reset: step-counter;
-        }
-
-        .tutorial-steps li {
-            counter-increment: step-counter;
-            margin-bottom: 15px;
-            padding-left: 40px;
-            position: relative;
-        }
-
-        .tutorial-steps li::before {
-            content: counter(step-counter);
-            position: absolute;
-            left: 0;
-            top: 0;
-            background: #4ecdc4;
-            color: white;
-            width: 25px;
-            height: 25px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: bold;
-            font-size: 0.9em;
-        }
-
-        .footer {
-            background: #333;
-            color: white;
-            padding: 30px;
-            text-align: center;
-        }
-
-        .notification {
-            position: fixed;
-            top: 20px;
-            right: 20px;
-            background: #4ecdc4;
-            color: white;
-            padding: 15px 25px;
-            border-radius: 10px;
-            transform: translateX(400px);
-            transition: transform 0.3s;
-            z-index: 1000;
-        }
-
-        .notification.show {
-            transform: translateX(0);
-        }
-
-        @media (max-width: 768px) {
-            .header h1 {
-                font-size: 2em;
-            }
-            
-            .main-content {
-                padding: 20px;
-            }
-            
-            .fonts-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
 </head>
 <body>
     <div class="container">
 
         <nav style="background:#333; color:#fff; padding:10px 0; text-align:center;">
-            <a href="index.html" style="color:#fff; margin:0 10px; text-decoration:none;">主页</a>
-            <a href="free-fonts.html" style="color:#fff; margin:0 10px; text-decoration:none;">免费字体</a>
-            <a href="aesthetic-fonts.html" style="color:#fff; margin:0 10px; text-decoration:none;">美学字体</a>
-            <a href="old-fonts.html" style="color:#fff; margin:0 10px; text-decoration:none;">经典字体</a>
-            <a href="font-changer.html" style="color:#fff; margin:0 10px; text-decoration:none;">字体更换工具</a>
-            <a href="download.html" style="color:#fff; margin:0 10px; text-decoration:none;">字体下载</a>
-            <a href="tools/bold-generator.html" style="color:#fff; margin:0 10px; text-decoration:none;">加粗生成器</a>
-            <a href="tools/italic-generator.html" style="color:#fff; margin:0 10px; text-decoration:none;">斜体生成器</a>
-            <a href="tools/script-generator.html" style="color:#fff; margin:0 10px; text-decoration:none;">脚本生成器</a>
-            <a href="guides/how-to-use.html" style="color:#fff; margin:0 10px; text-decoration:none;">使用指南</a>
-            <a href="guides/roblox-username-tips.html" style="color:#fff; margin:0 10px; text-decoration:none;">用户名技巧</a>
-            <a href="guides/font-compatibility.html" style="color:#fff; margin:0 10px; text-decoration:none;">字体兼容性</a>
+            <a href="index.html" style="color:#fff; margin:0 10px; text-decoration:none; padding:5px 10px; border-radius:3px;">Home</a>
+            <a href="free-fonts.html" style="color:#fff; margin:0 10px; text-decoration:none; padding:5px 10px; border-radius:3px;">Free Fonts</a>
+            <a href="aesthetic-fonts.html" style="color:#fff; margin:0 10px; text-decoration:none; padding:5px 10px; border-radius:3px;">Aesthetic Fonts</a>
+            <a href="old-fonts.html" style="color:#fff; margin:0 10px; text-decoration:none; padding:5px 10px; border-radius:3px;">Classic Fonts</a>
+            <a href="font-changer.html" style="color:#fff; margin:0 10px; text-decoration:none; padding:5px 10px; border-radius:3px;">Font Changer</a>
+            <a href="download.html" style="color:#fff; margin:0 10px; text-decoration:none; padding:5px 10px; border-radius:3px;">Download Fonts</a>
+            <a href="tools/bold-generator.html" style="color:#fff; margin:0 10px; text-decoration:none; padding:5px 10px; border-radius:3px;">Bold Generator</a>
+            <a href="tools/italic-generator.html" style="color:#fff; margin:0 10px; text-decoration:none; padding:5px 10px; border-radius:3px;">Italic Generator</a>
+            <a href="tools/script-generator.html" style="color:#fff; margin:0 10px; text-decoration:none; padding:5px 10px; border-radius:3px;">Script Generator</a>
+            <a href="guides/how-to-use.html" style="color:#fff; margin:0 10px; text-decoration:none; padding:5px 10px; border-radius:3px;">How to Use</a>
+            <a href="guides/roblox-username-tips.html" style="color:#fff; margin:0 10px; text-decoration:none; padding:5px 10px; border-radius:3px;">Username Tips</a>
+            <a href="guides/font-compatibility.html" style="color:#fff; margin:0 10px; text-decoration:none; padding:5px 10px; border-radius:3px;">Font Compatibility</a>
         </nav>
         <header class="header">
             <h1>🎮 Roblox Font Generator</h1>
@@ -255,7 +47,7 @@
             </div>
 
             <div class="fonts-grid" id="fontsGrid">
-                <!-- 字体样式将通过JavaScript动态生成 -->
+                <!-- Font styles will be generated by JavaScript -->
             </div>
 
             <div class="tutorial-section">
@@ -281,7 +73,7 @@
     </div>
 
     <script>
-        // 字体转换函数
+        // Font conversion functions
         const fontStyles = [
             {
                 name: "Bold Serif",
@@ -373,7 +165,7 @@
             }
         ];
 
-        // 生成字体预览
+        // Generate font previews
         function generateFonts() {
             const input = document.getElementById('textInput').value || 'Roblox';
             const grid = document.getElementById('fontsGrid');
@@ -393,7 +185,7 @@
             }).join('');
         }
 
-        // 复制到剪贴板
+        // Copy to clipboard
         function copyToClipboard(text, button) {
             navigator.clipboard.writeText(text).then(() => {
                 showNotification();
@@ -402,7 +194,7 @@
                     button.innerHTML = '📋 Copy Font';
                 }, 2000);
             }).catch(() => {
-                // 备用方案
+                // Fallback method
                 const textArea = document.createElement('textarea');
                 textArea.value = text;
                 document.body.appendChild(textArea);
@@ -413,7 +205,7 @@
             });
         }
 
-        // 显示通知
+        // Show notification
         function showNotification() {
             const notification = document.getElementById('notification');
             notification.classList.add('show');
@@ -422,10 +214,10 @@
             }, 3000);
         }
 
-        // 事件监听
+        // Event listeners
         document.getElementById('textInput').addEventListener('input', generateFonts);
 
-        // 初始化
+        // Initialize
         generateFonts();
     </script>
 </body>
